@@ -9,7 +9,7 @@ use std::path::Path;
 use rand::Rng;
 
 fn main() {
-    let lines = lines_from_file("/home/aibhstin/wordlists/wordlist-english.txt");
+    let lines = lines_from_file("./wordlist-english.txt");
     let mut rng = rand::thread_rng();
     println!("Number of lines: {}", lines.len());
 
