@@ -11,17 +11,17 @@ use rand::Rng;
 fn main() {
     let lines = lines_from_file("./wordlist-english.txt");
     let mut rng = rand::thread_rng();
-    println!("Number of lines: {}", lines.len());
+    //println!("Number of lines: {}", lines.len());
 
-    for i in 0..7 {
-        for j in 0..7 {
+    for _i in 0..7 {
+        for _j in 0..7 {
             let mut number: usize = rng.gen();
             number = number as usize % lines.len();
             print!("{} ", lines[number as usize])
         }
         println!();
     }
-    pause();
+    //pause();
 }
 
 fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
@@ -31,7 +31,7 @@ fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
         .map(|l| l.expect("Could not parse line"))
         .collect()
 }
-
+/*
 fn pause() {
     let mut stdin = io::stdin();
     let mut stdout = io::stdout();
@@ -41,3 +41,4 @@ fn pause() {
 
     let _ = stdin.read(&mut [0u8]).unwrap();
 }
+*/
